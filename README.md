@@ -1,20 +1,64 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ClinicFlow - Professional Clinic Management System
 
-# Run and deploy your AI Studio app
+ClinicFlow is a comprehensive, multi-lingual clinic management system designed for medical professionals. It features role-based access, patient tracking, automated prescription generation, and AI-powered data extraction.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/85049731-e0f3-4bb6-a973-ee946f6a80b3
+- **Multi-role Access**: Admin, Patient Registration, and Clinic Registration roles.
+- **Smart Registration**: AI-powered extraction of patient data from raw text.
+- **Real-time Notifications**: Instant alerts for new patient arrivals via WebSockets.
+- **Multi-lingual Support**: Full support for Arabic (RTL) and English (LTR).
+- **Advanced Analytics**: Dashboard with patient statistics and performance tracking.
+- **Export Capabilities**: Export patient data to Excel or PDF (Prescriptions).
+- **AI Assistant**: Integrated medical assistant for system navigation and terminology.
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- **Frontend**: React 19, Vite, Tailwind CSS, Framer Motion, Lucide React.
+- **Backend**: Node.js, Express, SQLite (better-sqlite3), WebSockets (ws).
+- **AI**: OpenRouter (GPT-OSS-120B) for data extraction and chat.
 
+## Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Prerequisites
+
+- Node.js (v18+)
+- npm
+
+### Installation
+
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env` file based on `.env.example` and add your OpenRouter API key:
+   ```env
+   OPENROUTER_API_KEY=your_api_key_here
+   ```
+
+### Running the App
+
+#### Development Mode
+```bash
+npm run dev
+```
+
+#### Production Mode
+1. Build the frontend:
+   ```bash
+   npm run build
+   ```
+2. Start the server:
+   ```bash
+   NODE_ENV=production npm start
+   ```
+
+## Environment Variables
+
+- `OPENROUTER_API_KEY`: Required for AI features.
+- `PORT`: Optional (defaults to 3000).
+
+## License
+
+MIT
